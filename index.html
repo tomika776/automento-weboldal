@@ -115,6 +115,21 @@
 
       gtag('config', 'AW-18382206075');
     </script>
+    <!-- Google Ads conversion: Kattint és hív -->
+    <script>
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof(url) != 'undefined') {
+            window.location = url;
+          }
+        };
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18382206075/1ixeCI3qtOQcEPvoqL1E',
+          'event_callback': callback
+        });
+        return false;
+      }
+    </script>
 </head>
 <body>
     <header>
@@ -126,7 +141,7 @@
     <div class="container">
         <div class="emergency-box">
             <p><strong>Azonnali segítség</strong> Apostag, Dunaújváros, Solt, Dunaföldvár, az M6-os autópálya és az 51-es főút környékén!</p>
-            <a href="tel:+36309585302" class="btn-call">📞 AZONNALI HÍVÁS</a>
+            <a href="tel:+36309585302" class="btn-call" onclick="return gtag_report_conversion('tel:+36309585302')">📞 AZONNALI HÍVÁS</a>
         </div>
         <section id="szolgaltatasok">
             <h2>Szolgáltatásaink</h2>
