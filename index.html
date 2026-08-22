@@ -106,8 +106,8 @@
             .btn-call { font-size: 1.3rem; }
         }
     </style>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://googletagmanager.com"></script>
+    <!-- Google tag (gtag.js) a levélből -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18382191888"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -115,7 +115,7 @@
 
       gtag('config', 'AW-18382191888');
     </script>
-    <!-- Google Ads conversion: Kattint és hív -->
+    <!-- Google Ads konverziós esemény a levél alapján, híváskattintásra szabva -->
     <script>
       function gtag_report_conversion(url) {
         var callback = function () {
@@ -141,6 +141,7 @@
     <div class="container">
         <div class="emergency-box">
             <p><strong>Azonnali segítség</strong> Apostag, Dunaújváros, Solt, Dunaföldvár, az M6-os autópálya és az 51-es főút környékén!</p>
+            <!-- A gomb, ami kattintáskor elindítja a fenti mérést -->
             <a href="tel:+36309585302" class="btn-call" onclick="return gtag_report_conversion('tel:+36309585302')">📞 AZONNALI HÍVÁS</a>
         </div>
         <section id="szolgaltatasok">
@@ -167,3 +168,4 @@
     </footer>
 </body>
 </html>
+
