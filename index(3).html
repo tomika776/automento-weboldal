@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="Kerek és Társa Kft. – autómentés, gépszállítás és műszaki mentés 0-24 Apostag, Dunaújváros, Solt, Dunaföldvár és az M6, 51-es, 52-es, 53-as főút környékén.">
+    <meta name="theme-color" content="#151515">
+    <title>Kerek és Társa Kft. | Autómentés &amp; Gépszállítás 0-24</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18382191888"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-18382191888');
+
+        function gtag_report_conversion(url) {
+            let navigated = false;
+            const callback = function () {
+                if (navigated) return;
+                navigated = true;
+                if (typeof url !== 'undefined' && url) {
+                    window.location.href = url;
+                }
+            };
+
+            if (typeof gtag === 'function') {
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-18382191888/wgyFCK234eUcEJD6p71E',
+                    'event_callback': callback,
+                    'event_timeout': 1000
+                });
+                // A telefonhívást akkor se akadályozza a mérés, ha a callback nem érkezik meg.
+                setTimeout(callback, 1200);
+            } else {
+                callback();
+            }
+            return false;
+        }
+    </script>
+
+    <style>
+        :root {
+            --yellow: #ffcc00;
+            --yellow-dark: #e6b800;
+            --black: #151515;
+            --black-soft: #202020;
+            --text: #222;
+            --muted: #666;
+            --bg: #f5f5f5;
+            --white: #fff;
+            --border: #e9e9e9;
+            --shadow: 0 12px 35px rgba(0, 0, 0, .08);
+            --radius: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+                Roboto, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.65;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        .container {
+            width: min(1080px, calc(100% - 32px));
+            margin: 0 auto;
+        }
+
+        /* HEADER */
+        header {
+            background:
+                radial-gradient(circle at 85% 20%, rgba(255,204,0,.16), transparent 32%),
+                linear-gradient(135deg, #111, #222);
+            color: var(--white);
+            border-bottom: 4px solid var(--yellow);
+        }
+
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 24px;
+            padding: 18px 0;
+        }
+
+        .brand {
+            text-decoration: none;
+            font-weight: 900;
+            letter-spacing: -.02em;
+            font-size: 1.15rem;
+        }
+
+        .header-phone {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--yellow);
+            color: var(--black);
+            padding: 10px 16px;
+            border-radius: 999px;
+            font-weight: 800;
+            text-decoration: none;
+            transition: transform .2s ease, background .2s ease;
+        }
+
+        .header-phone:hover {
+            background: var(--yellow-dark);
+            transform: translateY(-1px);
+        }
+
+        .hero {
+            padding: 70px 0 78px;
+            text-align: center;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            margin-bottom: 16px;
+            color: var(--yellow);
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: .08em;
+            font-size: .85rem;
+        }
+
+        h1 {
+            max-width: 850px;
+            margin: 0 auto;
+            font-size: clamp(2.2rem, 6vw, 4.4rem);
+            line-height: 1.05;
+            letter-spacing: -.04em;
+        }
+
+        .hero p {
+            max-width: 720px;
+            margin: 22px auto 0;
+            color: #ddd;
+            font-size: clamp(1.05rem, 2vw, 1.25rem);
+        }
+
+        .hero-actions {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 54px;
+            padding: 14px 24px;
+            border-radius: 10px;
+            font-weight: 900;
+            text-decoration: none;
+            border: 2px solid transparent;
+            transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-primary {
+            background: var(--yellow);
+            color: var(--black);
+            box-shadow: 0 8px 22px rgba(255, 204, 0, .22);
+        }
+
+        .btn-primary:hover {
+            background: var(--yellow-dark);
+        }
+
+        .btn-secondary {
+            color: var(--white);
+            border-color: #555;
+            background: rgba(255,255,255,.04);
+        }
+
+        /* CONTENT */
+        main {
+            padding: 38px 0 60px;
+        }
+
+        .emergency {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: center;
+            gap: 24px;
+            background: var(--yellow);
+            color: var(--black);
+            padding: 24px 28px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+        }
+
+        .emergency strong {
+            display: block;
+            font-size: 1.25rem;
+            margin-bottom: 3px;
+        }
+
+        .emergency .btn {
+            background: var(--black);
+            color: var(--white);
+            min-width: 220px;
+        }
+
+        .section {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: clamp(24px, 4vw, 36px);
+            margin-bottom: 24px;
+            box-shadow: 0 6px 24px rgba(0,0,0,.035);
+        }
+
+        .section-heading {
+            margin-bottom: 24px;
+        }
+
+        .section-heading h2 {
+            font-size: clamp(1.65rem, 4vw, 2.2rem);
+            line-height: 1.2;
+            margin-bottom: 7px;
+        }
+
+        .section-heading p {
+            color: var(--muted);
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .service {
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 22px;
+            background: #fff;
+        }
+
+        .service-icon {
+            width: 44px;
+            height: 44px;
+            display: grid;
+            place-items: center;
+            background: #fff6c9;
+            border-radius: 10px;
+            font-size: 1.3rem;
+            margin-bottom: 14px;
+        }
+
+        .service h3 {
+            font-size: 1.05rem;
+            margin-bottom: 7px;
+        }
+
+        .service p {
+            color: var(--muted);
+            font-size: .95rem;
+        }
+
+        .why {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+        }
+
+        .why-item {
+            padding: 20px;
+            background: #fafafa;
+            border-radius: 12px;
+        }
+
+        .why-item strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .why-item span {
+            color: var(--muted);
+            font-size: .95rem;
+        }
+
+        .areas {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+        }
+
+        .area {
+            background: #f1f1f1;
+            border-radius: 999px;
+            padding: 8px 13px;
+            font-size: .92rem;
+            font-weight: 700;
+        }
+
+        .contact {
+            background: var(--black);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .contact p {
+            color: #ccc;
+            margin: 8px auto 20px;
+            max-width: 650px;
+        }
+
+        .contact-phone {
+            display: inline-block;
+            color: var(--yellow);
+            font-size: clamp(1.8rem, 5vw, 2.8rem);
+            font-weight: 900;
+            text-decoration: none;
+            line-height: 1.2;
+        }
+
+        .contact-phone:hover {
+            text-decoration: underline;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #101010;
+            color: #aaa;
+            padding: 34px 0;
+        }
+
+        .footer-grid {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .company-details {
+            font-style: normal;
+        }
+
+        .company-details strong {
+            color: var(--white);
+        }
+
+        .company-details a {
+            color: var(--yellow);
+            text-decoration: none;
+        }
+
+        .copyright {
+            align-self: end;
+            font-size: .9rem;
+        }
+
+        /* MOBILE */
+        @media (max-width: 760px) {
+            .topbar {
+                padding: 14px 0;
+            }
+
+            .brand {
+                font-size: 1rem;
+            }
+
+            .header-phone {
+                padding: 9px 12px;
+                font-size: .9rem;
+            }
+
+            .hero {
+                padding: 52px 0 58px;
+            }
+
+            .emergency {
+                grid-template-columns: 1fr;
+                padding: 22px;
+            }
+
+            .emergency .btn {
+                width: 100%;
+            }
+
+            .services,
+            .why {
+                grid-template-columns: 1fr;
+            }
+
+            main {
+                padding-top: 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                width: min(100% - 20px, 1080px);
+            }
+
+            .topbar {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+
+            .hero-actions,
+            .hero-actions .btn {
+                width: 100%;
+            }
+
+            .section {
+                padding: 22px 18px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *, *::before, *::after {
+                transition: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="topbar">
+                <a class="brand" href="#" aria-label="Kerek és Társa Kft. – főoldal">
+                    Kerek és Társa Kft.
+                </a>
+
+                <a class="header-phone"
+                   href="tel:+36309585302"
+                   aria-label="Hívás a +36 30 958 5302 telefonszámon"
+                   onclick="return gtag_report_conversion('tel:+36309585302')">
+                    📞 +36 30 958 5302
+                </a>
+            </div>
+
+            <div class="hero">
+                <span class="eyebrow">0–24 elérhetőség</span>
+                <h1>Autómentés és gépszállítás, amikor szükség van rá</h1>
+                <p>
+                    Gyors segítség Apostag, Dunaújváros, Solt, Dunaföldvár,
+                    valamint az M6-os és a környező főutak térségében.
+                </p>
+
+                <div class="hero-actions">
+                    <a class="btn btn-primary"
+                       href="tel:+36309585302"
+                       onclick="return gtag_report_conversion('tel:+36309585302')">
+                        📞 Azonnali hívás
+                    </a>
+                    <a class="btn btn-secondary" href="#szolgaltatasok">
+                        Szolgáltatások
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="emergency" aria-label="Azonnali segítség">
+                <div>
+                    <strong>🚨 Bajba került az autó?</strong>
+                    Hívjon minket közvetlenül, és egyeztessük a segítséget.
+                </div>
+
+                <a class="btn"
+                   href="tel:+36309585302"
+                   onclick="return gtag_report_conversion('tel:+36309585302')">
+                    Hívás most
+                </a>
+            </section>
+
+            <section class="section" id="szolgaltatasok">
+                <div class="section-heading">
+                    <h2>Szolgáltatásaink</h2>
+                    <p>Autómentés és szállítás a környéken, 0–24.</p>
+                </div>
+
+                <div class="services">
+                    <article class="service">
+                        <div class="service-icon" aria-hidden="true">🚗</div>
+                        <h3>Személyautók mentése</h3>
+                        <p>Személyautók mentése és szállítása meghibásodás vagy egyéb műszaki probléma esetén.</p>
+                    </article>
+
+                    <article class="service">
+                        <div class="service-icon" aria-hidden="true">🚚</div>
+                        <h3>Kisteherautók és furgonok</h3>
+                        <p>Kisteherautók és furgonok szállítása a helyszínről a szükséges célállomásra.</p>
+                    </article>
+
+                    <article class="service">
+                        <div class="service-icon" aria-hidden="true">🛠️</div>
+                        <h3>Műszaki mentés</h3>
+                        <p>Segítség bajba jutott autósoknak a nap 24 órájában.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="section-heading">
+                    <h2>Miért válasszon minket?</h2>
+                </div>
+
+                <div class="why">
+                    <div class="why-item">
+                        <strong>📍 Helyi vállalkozás</strong>
+                        <span>Apostagi vállalkozásként a környék ismerős terep számunkra.</span>
+                    </div>
+                    <div class="why-item">
+                        <strong>🕐 0–24 elérhetőség</strong>
+                        <span>A nap 24 órájában fogadjuk a segítségre vonatkozó megkereséseket.</span>
+                    </div>
+                    <div class="why-item">
+                        <strong>💬 Korrekt tájékoztatás</strong>
+                        <span>A szolgáltatás előtt egyeztetjük a szükséges segítséget és a feltételeket.</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="section-heading">
+                    <h2>Szolgáltatási terület</h2>
+                    <p>A jelenlegi oldal alapján kiemelt környékek és útvonalak:</p>
+                </div>
+
+                <div class="areas">
+                    <span class="area">Apostag</span>
+                    <span class="area">Dunaújváros</span>
+                    <span class="area">Solt</span>
+                    <span class="area">Dunaföldvár</span>
+                    <span class="area">M6-os autópálya</span>
+                    <span class="area">51-es főút</span>
+                    <span class="area">52-es főút</span>
+                    <span class="area">53-as főút</span>
+                </div>
+            </section>
+
+            <section class="section contact" id="kapcsolat">
+                <div class="section-heading">
+                    <h2>Segítségre van szüksége?</h2>
+                    <p>Telefonáljon közvetlenül, és egyeztessük a mentést vagy szállítást.</p>
+                </div>
+
+                <a class="contact-phone"
+                   href="tel:+36309585302"
+                   onclick="return gtag_report_conversion('tel:+36309585302')">
+                    +36 30 958 5302
+                </a>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <address class="company-details">
+                <strong>KEREK és TÁRSA Kft.</strong><br>
+                6088 Apostag, Árpád utca 26/A.<br>
+                Telefon:
+                <a href="tel:+36309585302" onclick="return gtag_report_conversion('tel:+36309585302')">+36 30 958 5302</a>
+            </address>
+
+            <p class="copyright">&copy; 2026 Kerek és Társa Kft. Minden jog fenntartva.</p>
+        </div>
+    </footer>
+</body>
+</html>
